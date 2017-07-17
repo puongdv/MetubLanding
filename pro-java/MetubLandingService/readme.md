@@ -1,5 +1,7 @@
 # Server infomation
 
+root folder: /home/pro-java/MetubLandingService
+
 Server address: [0.0.0.0]
 
 Port: 7070
