@@ -3,6 +3,7 @@
 root folder: /home/latmat.metub.net
 
 Opent the file **/home/latmat.metub.net/index.html** and edit javascript config
+
 ```javascript
 window.PCONF = {
 	API_URL: 'latmat.metub.net',
@@ -17,6 +18,7 @@ window.PCONF = {
 ```
 
 Opent the file **/home/latmat.metub.net/admin/js/app.js** and edit javascript config
+
 ```javascript
 MODULE.basePath = "http://admin.metub.net/";
 

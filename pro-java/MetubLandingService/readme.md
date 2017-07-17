@@ -14,6 +14,7 @@ Database port: 27017
 ```ssh
 cd /home/pro-java/libs/
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz"
+
 tar xzf jdk-8u131-linux-x64.tar.gz
 ```
 
@@ -24,7 +25,7 @@ Run script to deploy
 ```
 
 # General Information
-Base-URL for our API is http://api.metub.tk
+Base-URL for our API is http://api.metub.net
 
 # Nginx config
 ```nginx
@@ -34,8 +35,8 @@ upstream MeTubLandingService {
 
 server {
 	listen 80;
-	server_name api.metub.tk;
-	client_max_body_size 10M;
+	server_name api.metub.net;
+	client_max_body_size 20M;
 	location / {	
 		proxy_pass http://MeTubLandingService;
 		proxy_set_header Host $http_host;
