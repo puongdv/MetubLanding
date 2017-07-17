@@ -96,16 +96,15 @@ if ($client->getAccessToken()) {
 		fclose($handle);
 		// If you want to make other calls after the file upload, set setDefer back to false
 		$client->setDefer(false);
-		//@unlink($result['video_path']);
+		@unlink($videoPath);
 		$videoId = $status['id'];	
-		//Set thumbnail
-		\Helper::setLog(array("FUCK"));
-		if($isThumb){
+		//Set thumbnail		
+		/*if($isThumb){
 			$imgResult = \Helper::setVideoThumb($client, $youtube, $videoId, $imagePath);
 			if($imgResult->error != 0){
 				die(json_encode($imgResult));
 			}
-		}
+		}*/
 		$plsResult = \Helper::addVideoToPlaylist($videoId, $playlistId, $title, $youtube);
 		if($plsResult->error != 0){
 			die(json_encode($plsResult));
