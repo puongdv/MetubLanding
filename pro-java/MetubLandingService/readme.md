@@ -1,6 +1,6 @@
 # Server infomation
 
-Server address: []
+Server address: [0.0.0.0]
 
 Port: 7070
 
@@ -15,11 +15,13 @@ Database port: 27017
 cd /home/pro-java/libs/
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz"
 tar xzf jdk-8u131-linux-x64.tar.gz
+```
 
 # Deployment
 Run script to deploy 
-
+```ssh
 ./runserver start || restart || stop
+```
 
 # General Information
 Base-URL for our API is http://api.metub.tk
@@ -42,3 +44,4 @@ server {
 	}	
 		
 }
+```
