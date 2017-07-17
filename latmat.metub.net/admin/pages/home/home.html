@@ -1,0 +1,46 @@
+ <div class="page-header">
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4><i class="icon-users position-left"></i> <span class="text-semibold">Danh sách</span> - User</h4>
+        </div>    
+        <a class="heading-elements-toggle"><i class="icon-menu"></i></a>
+    </div>
+
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li><a href="/"><i class="icon-home2 position-left"></i> Trang chủ</a></li>
+            <li class="active">Danh sách User</li>
+        </ul>    
+        <a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+    </div>
+</div>  
+<div class="content">
+    <div class="panel panel-flat">
+        <div class="dataTables_wrapper no-footer">
+            <table class="table datatable-save-state">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Họ và tên</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Thơi gian tham gia</th>
+                </tr>
+                </thead>
+                <tbody id="table-body-content">
+                </tbody>
+            </table>
+            <div id="paginate" class="datatable-footer">
+                <div class="dataTables_info" id="page-info"></div>
+                <div id="page-paginate-info" class="dataTables_paginate paging_simple_numbers">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer text-muted">
+        {{CONF.APP_COPYRIGHT}} by <a href="/admin" target="_blank">{{CONF.APP_NAME}}</a>
+    </div>
+    <!-- /footer -->
+    <audio id="yes" class="ng-scope"> <source src="{{CONF.MY_STATIC}}/audio/co.mp3" type="audio/mpeg"> </audio>
+</div>

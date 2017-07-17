@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Landing Page Contest</title>
+    <link rel=apple-touch-icon href=style/images/apple-touch-icon.png>
+    <link rel="shortcut icon" href="http://metub.net/favicon.png?v1" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Anton:300,400,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="style/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="style/style.css?v1" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="style/js/html5shiv.min.js"></script>
+      <script src="style/js/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        window.PCONF = {
+            API_URL: 'http://metub.tk',
+            API_DB_URL: 'http://api.metub.tk',
+            PLAYLIST: {
+                'PLGRd4Y_oqrRp1HW_dSH7cENV9kNCtde7F': 'Vai Diễn Tâm',
+                'PLGRd4Y_oqrRp-lqsfT2v86Qh5-2NJWUb5': 'Vai Diễn Christe',
+                'PLGRd4Y_oqrRrQHbbfxwxf0M5h5URFRD3V': 'Vai Diễn Lân',
+                'PLGRd4Y_oqrRosdLzRFhGBOa1EvjJRDpv8': 'Vai Giang Hồ'
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-center">
+            <div class="preloader-center-absolute">
+                <div class="object-loader"></div>
+            </div>
+        </div>
+    </div>
+    <section class="intro">        
+    </section>
+
+    <div class="container">                 
+        <div class="border-content">
+            <div class="about">
+                <h3>Giới Thiệu</h3>
+                <div class="row">
+					<div class="col-md-6">
+						<iframe id="youtube-intro" src="https://www.youtube.com/embed/fvnqf4OmAWY?ecver=2" frameborder="0" allowfullscreen></iframe>
+					</div>
+                    <div class="col-md-6">
+                        <p>Nhằm tôn vinh vẻ đẹp tình yêu đôi lứa và những câu chuyện tình yêu trong sáng, truyền cảm hứng và động lục cho nhau trong cuộc sống. METUB Network phối hợp với M-TP Entertaiment tổ chức cuộc thi “Nơi này có anh, Love is ...” Khác hẳn với các cuộc thi cover thông thường, cuộc thi  lần này khuyến khích sự sáng tạo trong cách thể hiện thông điệp tình yêu, có thể là slide ảnh, hoạt hình, motion graphics, nhảy... hoặc bất cứ hình thức nào bạn muốn để kể câu chuyện tình yêu theo cách độc đáo nhất và lan truyền thông điệp yêu.</p>
+						<p>Nhằm tôn vinh vẻ đẹp tình yêu đôi lứa và những câu chuyện tình yêu trong sáng, truyền cảm hứng và động lục cho nhau trong cuộc sống. METUB Network phối hợp với M-TP Entertaiment tổ chức cuộc thi “Nơi này có anh, Love is ...”</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="register">
+                <h3>CÁCH THAM GIA</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="content-register">
+                            <p>Thí sinh dự thi thực hiện Video dưới bất kì hình thức nào: Hát, nhảy, làm video sáng tạo,... có sử dụng bài hát/nhạc nền của ca khúc Nơi này có anh. Tải về nhạc nền tại đây <a href="#">[Tải xuống mp3]</a></p>
+                            <p>BTC sẽ chọn ra những Video  đạt chất lượng  và post lên <a href="#">www.metub.net/noinaycoanh_baiduthi</a> để bình chọn</p>
+                            <p>Khán giả tham gia share clip về trang cá nhân kèm theo hagtag <a href="#">#noinaycoanh</a>, <a href="#">#loveis</a> và để ở chế độ công khai</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="upload-video">
+                            <div class="container-upload">
+                                <span id="pickfile" class="btn-upload">
+                                    <span class="icon-upload">
+                                        <img src="style/images/btn-upload.png" alt="">
+                                    </span>
+                                    <span class="text-upload">Tải lên bài dự thi của bạn</span>
+                                    <span style="display:none" class="txt-error"></span>
+                                </span>
+                            </div>
+                            <div class="upload-detail">
+                                <form onsubmit="PApp.sendToYoutube(this); return false;" enctype="multipart/form-data" method="post" name="idFormYoutube" id="idFormYoutube">
+                                    <div id="progress-bar" class="form-group">
+                                        <label>Đang tải lên video (0%)</label>
+                                        <div class="progress">
+                                            <div class="progress-bar" aria-valuenow="0" style="width: 0%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Chọn vai diễn </label>
+                                        <select onchange="$('#roleName').val(this.options[this.selectedIndex].text);" id="role" name="role" class="form-control">
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Họ và tên bạn </label>
+                                        <input name="fullname" type="text" placeholder="Nhóm tham gia: ghi tên nhóm và tên người đại diện" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Số điện thoại của bạn </label>
+                                        <input name="phone" type="number" placeholder="Viết liền không cách, không dấu chấm giữa các số" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email của bạn </label>
+                                        <input name="email" type="email" placeholder="" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mô tả Video</label>
+                                        <textarea name="content" class="form-control" rows="3" placeholder="Lời giới thiệu hoặc kêu gọi bình chọn"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <p style="color:darkorchid;">Vui lòng đợi quá trình tải lên hoàn tất trước khi bấm "Xác Nhận Gửi"</p>
+                                        <p id="txt-error" style="color:#e42647; display:none"></p>
+                                        <input name="fileName" id="fileName" type="hidden" value="./videos/1.mp4">
+                                        <input name="roleName" id="roleName" type="hidden" value="">
+                                        <input name="ID" id="ID" type="hidden" value="">
+                                        <button type="submit" class="btn btn-submit-upload pull-right">Xác nhận gửi</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div style="display:none" class="upload-success">
+                                <p>Xin chúc mừng: Bài dự thi của bạn đã được gửi thành công. Quá trình xét duyệt có thể lên đến 24h. Sau khi xét duyệt bài dự thi của bạn sẽ xuất hiện tại: https://www.youtube.com/watch?v=<span id="youtube-video-id"></span>
+                                </p>
+                                <p>Trong thời gian chờ đợi bạn có thể xem qua các bài thi khác <a id="aPlaylist" target="_blank" href="https://www.youtube.com/playlist?list=PLi9ycObq8qP1FzcPo_xzJ6DgARhwBVGa2"><span style="background: #fff;border-radius: 4px;padding: 2px 5px;">tại đây</span></a> hoặc <a href="/"><span style="background: #fff;border-radius: 4px;padding: 2px 5px;">tải lên</span></a> bài dự thi khác</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="timeline">
+                        <h3>Thời gian</h3>
+                        <div class="content-register">
+							
+                            <p>
+								<strong>17/07/2017: Nhận video</strong> <br/>
+								Bắt đầu nhận video casting qua form: <a href="/">www.latmat3.metub.net</a>
+							</p>
+							
+                            <p>
+								<strong>20/08/2017: Xét duyệt và công bố</strong> <br/>
+								Lý Hải cùng ekip đoàn phim chọn ra những ngương mặt triển vọng cho từng vai diễn. Thông báo diễn viên được chọn qua website: <a href="/">www.latmat3.metub.net</a>
+							</p>
+                            <p>
+								<strong>20/08/2017: Casting vòng offline</strong><br/>
+								Các diễn viên được chọn qua vòng 2 tham gia casting offline cùng Lý Hải, chuẩn bị cho bấm máy quay phim.
+							</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="prize">
+                        <h3>Câu hỏi thường gặp</h3>
+                        <div class="row">
+					<ul class="ul-support">
+						<li>
+							<a class="t" href="javascript:void(0)"><b>Trong trường hợp tôi gửi bài dự thi qua form nhưng không được (bị lỗi) tôi phải làm sao?</b></a>
+							<p style="display: none;">
+								Trong trường hợp bị lỗi khi gửi bài dự thi qua form, bạn có thể gửi email về cho ban tổ chức qua form:<br>
+								Tiêu đề email: Bài Dự Thi Nơi Này Có Anh, Love is<br>
+								Nội dung email:<br>
+								- Tên bạn:<br>
+								- Số Điện Thoại:<br>
+								- Địa Chỉ Email:<br>
+								- Tiêu Đề Video:<br>
+								- Mô Tả Video, lời kêu gọi bình chọn hoặc kể về câu chuyện của bạn<br>
+								- Hình đại diện cho video<br>
+								Đính kèm video bài dự thi<br><br>
+
+								Email xin gửi về. support@metub.net
+							</p>
+						</li>
+						<li>
+							<a class="t" href="javascript:void(0)"><b>Cuộc thi không giới hạn thể loại là như thế nào?</b></a>
+							<p>
+								Tức là khác với các cuộc thi cover khác, thí sinh chỉ có thể trình diễn khả năng ca hát của mình. Cuộc thi sáng tạo Video"Nơi này có anh, love is…" mở ra cho thí sinh nhiều cách sáng tạo, miễn là đúng mục đích truyền tải thông điệp tình yêu
+							</p>
+						</li>
+						<li>
+							<a class="t" href="javascript:void(0)"><b>Ban Tổ Chức có gợi ý nào cho thí sinh?</b></a>
+							<p>
+								"Chúng tôi rất tin tưởng sẽ nhận được nhiều bài dự thi sáng tạo bất ngờ từ các bạn trẻ tham dự. Đối với các bạn rất hứng thú với cuộc thi nhưng chưa có ý tưởng , chúng tôi có 1 số gợi ý về thể loại:<br> 
+								- Làm slide ảnh quá trình tình yêu của bạn<br>
+								- Clip du lịch của 2 bạn<br>
+								- Video hoạt hình<br> 
+								- Motion Graphic (Đồ hoạ chuyển động)<br>
+								- Video sáng tạo<br> 
+								- Dance geography<br>
+								- Reaction Video<br>
+								- Parody Video<br>
+								Tất cả các video tham gia được quyền sử dụng ca khúc Nơi Này Có Anh cho bài thi của mình"
+							</p>
+						</li>
+						<li>
+							<a class="t" href="javascript:void(0)"><b>Tôi có được đăng lại Video này trên kênh YouTube của tôi. Trường hợp tôi có tham gia cuộc thi và không tham gia cuộc thi?</b></a>
+							<p>
+								"Sau khi kết thúc cuộc thi (sau ngày 08/03/2017), các bạn đăng tải Video lên kênh sau đó gửi link video của các bạn về cho ban tổ chức theo mẫu:
+<a target="_blank" href="https://docs.google.com/a/metub.net/forms/d/e/1FAIpQLSfUwYk0wZU-2nsKl9j407cisbAmE4D32TPhAXE94QUzzlecwA/viewform">Đăng ký sử dụng content từ METUB Network</a>"
+							</p>
+						</li>
+						<li>
+							<a class="t" href="javascript:void(0)"><b>Tối có thể dùng phim/video khác rồi lồng nhạc vào để dự thi không?</b></a>
+							<p>Không được, Video phải do bạn tự thực hiện, tự sản xuất. Tất cả các video sử dụng video khác (không thuộc quyền sở hữu của bạn) đều không không hợp lệ.</p>
+						</li>
+						<li>
+							<a class="t" href="javascript:void(0)"><b>Có giới hạn thời lượng Video không?</b></a>
+							<p>Không, video không giới hạn thời lượng</p>
+						</li>
+						<li>
+							<a class="t" href="javascript:void(0)"><b>Đối với các trường hợp khác không nêu trên đây nhưng liên quan đến cuộc thi tôi sẽ liên hệ với ban tổ chức qua cách nào?</b></a>
+							<p>Bạn có thể liên hệ với ban tổ chức qua email: <a href="mailto:support@metub.net">support@metub.net</a></p>
+						</li>						
+					</ul>
+				</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="videos">
+                <h3>+200 Video tham gia casting</h3>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#" class="item-video">
+                            <img src="style/images/video-1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="item-video">
+                            <img src="style/images/video-1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="item-video">
+                            <img src="style/images/video-1.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+			<div class="col-xs-12 text-center">
+				<a target="_blank" href="https://www.youtube.com/playlist?list=PLGRd4Y_oqrRp1HW_dSH7cENV9kNCtde7F" class="btn btn-primary btn-view-all-lg">Xem toàn bộ bài dự thi tại đây</a>
+			</div>
+        </div><!-- end border-content -->
+        <div id="loadding" class="modal fade in">
+            <div class="l">
+                <div style="max-width:300px; margin:auto">
+                    <div id="circularG">
+                        <div id="circularG_1" class="circularG"></div>
+                        <div id="circularG_2" class="circularG"></div>
+                        <div id="circularG_3" class="circularG"></div>
+                        <div id="circularG_4" class="circularG"></div>
+                        <div id="circularG_5" class="circularG"></div>
+                        <div id="circularG_6" class="circularG"></div>
+                        <div id="circularG_7" class="circularG"></div>
+                        <div id="circularG_8" class="circularG"></div>
+                    </div>
+                    <div style="color: #fff;z-index: 9999;text-align: center; position:relative">Vui lòng đợi cho quá trình lưu video hoàn tất trước khi tắt máy.</div>
+                    <div class="modal-backdrop fade in"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end container -->
+
+    <script src="style/js/jquery.min.js" type="text/javascript"></script>
+    <script src="style/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="style/js/plupload/plupload.full.min.js" type="text/javascript"></script>
+    <script src="style/js/apps.js" type="text/javascript"></script>
+    <script>
+        var option = '';
+        var i = 1;
+        for (var key in PCONF.PLAYLIST){
+            if(i==1){
+                document.getElementById('roleName').value = PCONF.PLAYLIST[key];
+            }
+            i++;
+            option += '<option value="'+ key +'">'+ PCONF.PLAYLIST[key] +'</option>';
+        }
+        document.getElementById('role').innerHTML = option;
+        PApp.init();
+    </script>
+</body>
+</html>

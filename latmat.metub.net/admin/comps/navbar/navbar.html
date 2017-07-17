@@ -1,0 +1,29 @@
+<div class="navbar-header">
+    <a class="navbar-brand" href="/">
+        <img src="{{CONF.MY_STATIC}}/assets/images/logo.png?v1" alt="">
+    </a>
+
+    <ul class="nav navbar-nav visible-xs-block">
+        <li><div data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></div></li>
+        <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+    </ul>
+</div>
+
+<div class="navbar-collapse collapse" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+        <li><a onclick="if($('body').hasClass('sidebar-xs')){$('body').removeClass('sidebar-xs');}else{$('body').addClass('sidebar-xs');}" class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>    
+    </ul>    
+    <ul class="nav navbar-nav navbar-right">            
+        <li class="dropdown dropdown-user">
+            <a id="userInfo" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="{{CONF.MY_STATIC}}/assets/images/user.default.jpg" alt="">
+                <span id="fullname">Guest</span>
+                <i class="caret"></i>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right">                
+                <li><a href="/logout"><i class="icon-switch2"></i> Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

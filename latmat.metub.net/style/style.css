@@ -1,0 +1,940 @@
+/*
+	Documents mecloud.vn
+	Author: Tanh Nguyen
+	Version: 0.01
+*/
+/* Font Color */
+/* Background Color */
+/* link color */
+/* Mixins */
+/* line 1, scss/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 4, scss/_base.scss */
+body {
+  min-height: 100%;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #757575;
+  line-height: 24px;
+  background-color: white;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* line 14, scss/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #1d2743;
+  #font-weight: 700;
+}
+
+/* line 18, scss/_base.scss */
+p {
+  margin: 0 0 20px;
+}
+
+/* line 21, scss/_base.scss */
+a {
+  color: #016fae;
+  text-decoration: none;
+  outline: 0 !important;
+}
+/* line 26, scss/_base.scss */
+a:hover {
+  color: #e42647;
+  text-decoration: none;
+}
+
+/* line 32, scss/_base.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 35, scss/_base.scss */
+input, button, textarea {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  outline: 0 !important;
+}
+
+/* line 39, scss/_base.scss */
+.container-fluid {
+  max-width: 1440px;
+  padding: 0;
+}
+
+/* line 43, scss/_base.scss */
+.border-none {
+  border: none !important;
+}
+
+/* line 47, scss/_base.scss */
+.btn {
+  border: none;
+  background-color: #ffffff;
+  padding: 10px 26px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+/* line 55, scss/_base.scss */
+.btn i {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+/* line 61, scss/_base.scss */
+.fix-icon {
+  display: inline-block;
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+  height: 20px;
+}
+
+/* line 66, scss/_base.scss */
+.hidden-before.col-sm-4 .item-contact:before {
+  display: none;
+}
+
+/* line 69, scss/_base.scss */
+.btn-lg {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 10px 20px;
+}
+
+/* line 73, scss/_base.scss */
+.btn-primary {
+  padding: 10px 30px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #e42647;
+  display: inline-block;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+/* line 82, scss/_base.scss */
+.btn-primary:hover {
+  background-color: #e42647;
+}
+
+/* line 87, scss/_base.scss */
+.btn-default {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  color: #757575;
+  background-color: #ececec;
+  display: inline-block;
+  -moz-border-radius: 22px;
+  -webkit-border-radius: 22px;
+  border-radius: 22px;
+  -webkit-box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.2s ease-in;
+  -moz-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+/* line 97, scss/_base.scss */
+.btn-default:hover {
+  color: #757575;
+  background-color: #d0d0d0;
+}
+
+/* line 103, scss/_base.scss */
+.form-control {
+  box-shadow: inherit;
+  -webkit-box-shadow: inherit;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-color: #d1d1d1;
+  height: 30px;
+  padding: 3px 12px;
+}
+
+/* line 112, scss/_base.scss */
+.pl-30 {
+  padding-left: 45px !important;
+}
+
+/* line 115, scss/_base.scss */
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+/* line 118, scss/_base.scss */
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+/* line 121, scss/_base.scss */
+.color-red {
+  color: #e42647 !important;
+}
+
+@media (min-width: 1200px) {
+  /* line 126, scss/_base.scss */
+  .visible-lg-inline {
+    display: inline-block !important;
+  }
+}
+/* line 130, scss/_base.scss */
+.pos-rel-index-1 {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 134, scss/_base.scss */
+hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-color: #fff;
+}
+
+/* line 1, scss/_layout.scss */
+.preloader {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+}
+/* line 10, scss/_layout.scss */
+.preloader svg .st0 {
+  fill: #EC1C39;
+}
+/* line 13, scss/_layout.scss */
+.preloader svg .st1 {
+  fill: #808184;
+}
+/* line 18, scss/_layout.scss */
+.preloader .preloader-center {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 23, scss/_layout.scss */
+.preloader .preloader-center .preloader-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 32, scss/_layout.scss */
+.preloader .object-loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  animation: colors 4s infinite ease-in, scale 2s infinite ease-in;
+}
+/* line 44, scss/_layout.scss */
+.preloader .object-loader:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #ecf0f1;
+  transform-origin: left top;
+  animation: rotate 1s infinite linear;
+  border-radius: 50%;
+}
+
+/* line 58, scss/_layout.scss */
+body {
+  height: 100%;
+}
+
+/* line 61, scss/_layout.scss */
+.intro {
+  background: url("images/bg.jpg") no-repeat bottom center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 837px;
+  width: 100%;
+}
+
+/* line 67, scss/_layout.scss */
+.header {
+  margin-top: 40px;
+}
+
+/* line 70, scss/_layout.scss */
+.logo-contest {
+  float: left;
+  width: 417px;
+  height: 124px;
+}
+/* line 75, scss/_layout.scss */
+.logo-contest img {
+  width: 100%;
+}
+
+/* line 80, scss/_layout.scss */
+.logo {
+  width: 125px;
+  height: 54px;
+  float: right;
+  display: block;
+}
+/* line 86, scss/_layout.scss */
+.logo img {
+  width: 100%;
+}
+
+/* line 92, scss/_layout.scss */
+.text-heading h1 {
+  font-size: 38px;
+  font-weight: 300;
+  color: #e42647;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+/* line 99, scss/_layout.scss */
+.text-heading h1 .highlight {
+  font-weight: 700;
+}
+/* line 104, scss/_layout.scss */
+.text-heading h2 {
+  font-weight: 400;
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 0;
+}
+
+/* line 111, scss/_layout.scss */
+.btn-view-all {
+  font-size: 20px;
+  display: block;
+  float: right;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #e42647;
+  margin-bottom: 20px;
+}
+
+/* line 126, scss/_layout.scss */
+.border-content h3 {
+  font-size: 30px;
+  margin: 60px 0 20px 0;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  font-style: italic;
+}
+
+/* line 133, scss/_layout.scss */
+.content-register a:hover {
+  color: #e42647;
+}
+
+/* line 136, scss/_layout.scss */
+.upload-video {
+  width: 400px;
+  background-color: #e42647;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  float: right;
+  padding: 20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 144, scss/_layout.scss */
+.upload-video.step-2 {
+  background-color: #cfcfcf;
+}
+
+/* line 149, scss/_layout.scss */
+.upload-detail, .upload-success {
+  display: none;
+}
+
+/* line 152, scss/_layout.scss */
+.btn-upload {
+  color: #f3f4f6;
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 25px 0;
+}
+/* line 159, scss/_layout.scss */
+.btn-upload:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* line 166, scss/_layout.scss */
+.upload-detail .progress {
+  height: 8px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 170, scss/_layout.scss */
+.upload-detail .progress-bar {
+  background-color: #e42647;
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+/* line 174, scss/_layout.scss */
+.upload-detail label {
+  color: #453a46;
+  font-weight: 400;
+}
+/* line 178, scss/_layout.scss */
+.upload-detail input, .upload-detail textarea {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 182, scss/_layout.scss */
+.btn-submit-upload {
+  background-color: #453a46;
+  padding: 10px 20px;
+  color: #f3f4f6;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 191, scss/_layout.scss */
+.btn-submit-upload:hover {
+  background-color: #e42647;
+  color: white;
+}
+
+/* line 197, scss/_layout.scss */
+.upload-success {
+  color: white;
+}
+
+/* line 200, scss/_layout.scss */
+.icon-upload {
+  display: block;
+  width: 130px;
+  height: 87px;
+  margin: 0 auto;
+}
+/* line 206, scss/_layout.scss */
+.icon-upload img {
+  width: 100%;
+}
+
+/* line 211, scss/_layout.scss */
+.text-upload {
+  margin-top: 20px;
+  display: block;
+}
+
+/* line 215, scss/_layout.scss */
+.content-timeline {
+  border-left: 3px solid #e42647;
+  padding-left: 40px;
+  padding-right: 105px;
+}
+/* line 220, scss/_layout.scss */
+.content-timeline li {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #453a46;
+  color: white;
+  font-size: 12px;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+/* line 229, scss/_layout.scss */
+.content-timeline li:before {
+  content: "";
+  position: absolute;
+  background-color: #e42647;
+  width: 17px;
+  height: 17px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 2px solid white;
+  left: -50px;
+  top: 38px;
+}
+/* line 241, scss/_layout.scss */
+.content-timeline li:nth-last-child(1) {
+  padding-bottom: 40px;
+}
+/* line 245, scss/_layout.scss */
+.content-timeline li .date-timeline {
+  font-size: 14px;
+  text-align: right;
+}
+
+/* line 254, scss/_layout.scss */
+.list-prize li {
+  position: relative;
+}
+/* line 257, scss/_layout.scss */
+.list-prize li:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #757575;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  top: 10px;
+  left: -30px;
+}
+
+/* line 270, scss/_layout.scss */
+.item-video {
+  display: block;
+  margin-bottom: 30px;
+}
+/* line 274, scss/_layout.scss */
+.item-video img {
+  width: 100%;
+}
+
+/* line 278, scss/_layout.scss */
+.btn-view-all-lg {
+  padding: 10px 70px;
+  color: #fff;
+  background-color: #e42647;
+  font-size: 20px;
+  font-family:'Anton', sans-serif;
+  font-style: italic;
+  margin: 40px 0;
+}
+
+/* line 286, scss/_layout.scss */
+footer {
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* col-lg */
+/* col-md */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 14, scss/_responsive.scss */
+  .intro {
+    height: 627px;
+  }
+
+  /* line 17, scss/_responsive.scss */
+  .logo-contest {
+    width: 280px;
+    height: 86px;
+  }
+
+  /* line 21, scss/_responsive.scss */
+  .logo {
+    width: 90px;
+    height: 41px;
+  }
+}
+#youtube-intro{min-height:290px; width:100%}
+/* col-sm */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 31, scss/_responsive.scss */
+  #youtube-intro{min-height:370px; width:100%}
+  .intro {
+    height: 471px;
+  }
+
+  /* line 34, scss/_responsive.scss */
+  .logo-contest {
+    width: 280px;
+    height: 86px;
+  }
+
+  /* line 38, scss/_responsive.scss */
+  .logo {
+    width: 90px;
+    height: 41px;
+  }
+
+  /* line 45, scss/_responsive.scss */
+  .upload-video {
+    width: 100%;
+  }
+
+  /* line 48, scss/_responsive.scss */
+  .content-timeline {
+    padding-right: 0;
+  }
+}
+/* col-xs */
+@media (max-width: 767px) {
+	#youtube-intro{min-height:220px; width:100%}
+  /* line 58, scss/_responsive.scss */
+  .intro {
+    height: 254px;
+  }  
+
+  /* line 61, scss/_responsive.scss */
+  .logo-contest {
+    width: 140px;
+    height: 44px;
+  }
+
+  /* line 65, scss/_responsive.scss */
+  .logo {
+    width: 75px;
+    height: 33px;
+  }
+
+  /* line 69, scss/_responsive.scss */
+  .header {
+    margin-top: 10px;
+  }
+
+  /* line 73, scss/_responsive.scss */
+  .text-heading h1 {
+    font-size: 23px;
+  }
+  /* line 76, scss/_responsive.scss */
+  .text-heading h2 {
+    font-size: 13px;
+  }
+
+  /* line 80, scss/_responsive.scss */
+  .btn-view-all {
+    font-size: 20px;
+    float: none;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  /* line 89, scss/_responsive.scss */
+  .border-content h3 {
+    font-size: 22px;
+    margin: 30px 0 20px 0;
+  }
+
+  /* line 95, scss/_responsive.scss */
+  .upload-video {
+    width: 100%;
+  }
+
+  /* line 98, scss/_responsive.scss */
+  .content-timeline {
+    padding-right: 0;
+    padding-left: 20px;
+  }
+  /* line 102, scss/_responsive.scss */
+  .content-timeline li:before {
+    left: -30px;
+  }
+
+  /* line 107, scss/_responsive.scss */
+  hr {
+    margin-top: 0px;
+  }
+
+  /* line 110, scss/_responsive.scss */
+  .list-prize {
+    padding-left: 20px;
+  }
+  /* line 113, scss/_responsive.scss */
+  .list-prize li:before {
+    left: -13px;
+  }
+
+  /* line 118, scss/_responsive.scss */
+  .btn-view-all-lg {
+    padding: 15px 20px;
+    font-size: 13px;
+    margin: 0 0 30px;
+  }
+}
+ul.ul-support a{color:#636363}
+ul.ul-support{	
+	list-style-type:decimal;
+}
+
+ul.ul-support li{
+	cursor:pointer;
+  line-height: 17px !important;
+  margin: 14px 0;
+}
+
+ul.ul-support li p{
+	background-color: #eeeeee;
+    padding: 10px 20px;
+    margin-top: 15px;
+	display:none;
+  border-radius: 4px;
+}
+.hide_file {
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-size: 24px;
+  width: 100%;
+}
+.y-thumbnail{
+  width: 100%;
+  height: 35px;
+  background-color: #c6c6c6;
+  border-radius: 4px;
+  border: 1px solid #b7b7b7;
+  position: relative;
+}
+.y-thumbnail span{
+  padding-top: 5px;
+  display: block;
+  padding-left: 10px;
+}
+.l{
+  position:fixed;
+  top:50%;
+  width:100%;
+}
+ul.ul-support{
+  list-style-type:decimal;
+}
+
+ul.ul-support li{
+  cursor:pointer;
+  line-height: 17px !important;
+  margin: 14px 0;
+}
+
+ul.ul-support li p{
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  margin-top: 15px;
+  display:none;
+  border-radius: 4px;
+}
+.img-thumb{
+  margin-bottom:10px;
+}
+.img-thumb img{
+  border-radius:5px;
+}
+#circularG{
+  position:relative;
+  width:58px;
+  height:58px;
+  margin: auto;
+  z-index:9999;
+}
+
+.circularG{
+  position:absolute;
+  background-color:rgb(255,255,255);
+  width:14px;
+  height:14px;
+  border-radius:9px;
+  -o-border-radius:9px;
+  -ms-border-radius:9px;
+  -webkit-border-radius:9px;
+  -moz-border-radius:9px;
+  animation-name:bounce_circularG;
+  -o-animation-name:bounce_circularG;
+  -ms-animation-name:bounce_circularG;
+  -webkit-animation-name:bounce_circularG;
+  -moz-animation-name:bounce_circularG;
+  animation-duration:1.1s;
+  -o-animation-duration:1.1s;
+  -ms-animation-duration:1.1s;
+  -webkit-animation-duration:1.1s;
+  -moz-animation-duration:1.1s;
+  animation-iteration-count:infinite;
+  -o-animation-iteration-count:infinite;
+  -ms-animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+  -moz-animation-iteration-count:infinite;
+  animation-direction:normal;
+  -o-animation-direction:normal;
+  -ms-animation-direction:normal;
+  -webkit-animation-direction:normal;
+  -moz-animation-direction:normal;
+}
+
+#circularG_1{
+  left:0;
+  top:23px;
+  animation-delay:0.41s;
+  -o-animation-delay:0.41s;
+  -ms-animation-delay:0.41s;
+  -webkit-animation-delay:0.41s;
+  -moz-animation-delay:0.41s;
+}
+
+#circularG_2{
+  left:6px;
+  top:6px;
+  animation-delay:0.55s;
+  -o-animation-delay:0.55s;
+  -ms-animation-delay:0.55s;
+  -webkit-animation-delay:0.55s;
+  -moz-animation-delay:0.55s;
+}
+
+#circularG_3{
+  top:0;
+  left:23px;
+  animation-delay:0.69s;
+  -o-animation-delay:0.69s;
+  -ms-animation-delay:0.69s;
+  -webkit-animation-delay:0.69s;
+  -moz-animation-delay:0.69s;
+}
+
+#circularG_4{
+  right:6px;
+  top:6px;
+  animation-delay:0.83s;
+  -o-animation-delay:0.83s;
+  -ms-animation-delay:0.83s;
+  -webkit-animation-delay:0.83s;
+  -moz-animation-delay:0.83s;
+}
+
+#circularG_5{
+  right:0;
+  top:23px;
+  animation-delay:0.97s;
+  -o-animation-delay:0.97s;
+  -ms-animation-delay:0.97s;
+  -webkit-animation-delay:0.97s;
+  -moz-animation-delay:0.97s;
+}
+
+#circularG_6{
+  right:6px;
+  bottom:6px;
+  animation-delay:1.1s;
+  -o-animation-delay:1.1s;
+  -ms-animation-delay:1.1s;
+  -webkit-animation-delay:1.1s;
+  -moz-animation-delay:1.1s;
+}
+
+#circularG_7{
+  left:23px;
+  bottom:0;
+  animation-delay:1.24s;
+  -o-animation-delay:1.24s;
+  -ms-animation-delay:1.24s;
+  -webkit-animation-delay:1.24s;
+  -moz-animation-delay:1.24s;
+}
+
+#circularG_8{
+  left:6px;
+  bottom:6px;
+  animation-delay:1.38s;
+  -o-animation-delay:1.38s;
+  -ms-animation-delay:1.38s;
+  -webkit-animation-delay:1.38s;
+  -moz-animation-delay:1.38s;
+}
+
+
+
+@keyframes bounce_circularG{
+  0%{
+    transform:scale(1);
+  }
+
+  100%{
+    transform:scale(.3);
+  }
+}
+
+@-o-keyframes bounce_circularG{
+  0%{
+    -o-transform:scale(1);
+  }
+
+  100%{
+    -o-transform:scale(.3);
+  }
+}
+
+@-ms-keyframes bounce_circularG{
+  0%{
+    -ms-transform:scale(1);
+  }
+
+  100%{
+    -ms-transform:scale(.3);
+  }
+}
+
+@-webkit-keyframes bounce_circularG{
+  0%{
+    -webkit-transform:scale(1);
+  }
+
+  100%{
+    -webkit-transform:scale(.3);
+  }
+}
+
+@-moz-keyframes bounce_circularG{
+  0%{
+    -moz-transform:scale(1);
+  }
+
+  100%{
+    -moz-transform:scale(.3);
+  }
+}
+
+#pickfile{cursor: pointer}
+@media (min-width: 250px) and (max-width: 375px) {
+  .intro {
+    height: 240px;
+  }
+}
+@media (min-width: 250px) and (max-width: 360px) {
+  .intro {
+    height: 230px;
+  }
+}
+@media (min-width: 250px) and (max-width: 320px) {
+  .intro {
+    height: 200px;
+  }
+}

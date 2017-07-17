@@ -1,0 +1,176 @@
+Jul 15, 2017 3:16:46 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 15, 2017 3:16:46 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Jul 15, 2017 3:16:46 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:47}] to localhost:27017
+Jul 15, 2017 3:16:46 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2672975}
+Jul 15, 2017 3:16:46 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:48}] to localhost:27017
+com.mongodb.MongoCommandException: Command failed with error 48: 'a collection 'metub.counter' already exists' on server localhost:27017. The full response is { "note" : "the autoIndexId option is deprecated and will be removed in a future release", "ok" : 0.0, "errmsg" : "a collection 'metub.counter' already exists", "code" : 48, "codeName" : "NamespaceExists" }
+	at com.mongodb.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:115)
+	at com.mongodb.connection.CommandProtocol.execute(CommandProtocol.java:114)
+	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:168)
+	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:289)
+	at com.mongodb.connection.DefaultServerConnection.command(DefaultServerConnection.java:176)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:216)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:207)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:146)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:139)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:380)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:422)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:413)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:53)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:198)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:169)
+	at net.metub.LandingService.initDB(LandingService.java:99)
+	at net.metub.LandingService.main(LandingService.java:51)
+[Web API Server] Start new instance at localhost:7070
+Jul 15, 2017 3:21:43 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 15, 2017 3:21:44 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Jul 15, 2017 3:21:44 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:50}] to localhost:27017
+Jul 15, 2017 3:21:44 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=802419}
+Jul 15, 2017 3:21:44 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:51}] to localhost:27017
+com.mongodb.MongoCommandException: Command failed with error 48: 'a collection 'metub.counter' already exists' on server localhost:27017. The full response is { "note" : "the autoIndexId option is deprecated and will be removed in a future release", "ok" : 0.0, "errmsg" : "a collection 'metub.counter' already exists", "code" : 48, "codeName" : "NamespaceExists" }
+	at com.mongodb.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:115)
+	at com.mongodb.connection.CommandProtocol.execute(CommandProtocol.java:114)
+	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:168)
+	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:289)
+	at com.mongodb.connection.DefaultServerConnection.command(DefaultServerConnection.java:176)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:216)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:207)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:146)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:139)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:380)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:422)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:413)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:53)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:198)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:169)
+	at net.metub.LandingService.initDB(LandingService.java:99)
+	at net.metub.LandingService.main(LandingService.java:51)
+[Web API Server] Start new instance at localhost:7070
+Jul 15, 2017 3:23:11 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 15, 2017 3:23:11 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Jul 15, 2017 3:23:11 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:53}] to localhost:27017
+Jul 15, 2017 3:23:11 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=17472532}
+Jul 15, 2017 3:23:11 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:54}] to localhost:27017
+com.mongodb.MongoCommandException: Command failed with error 48: 'a collection 'metub.counter' already exists' on server localhost:27017. The full response is { "note" : "the autoIndexId option is deprecated and will be removed in a future release", "ok" : 0.0, "errmsg" : "a collection 'metub.counter' already exists", "code" : 48, "codeName" : "NamespaceExists" }
+	at com.mongodb.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:115)
+	at com.mongodb.connection.CommandProtocol.execute(CommandProtocol.java:114)
+	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:168)
+	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:289)
+	at com.mongodb.connection.DefaultServerConnection.command(DefaultServerConnection.java:176)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:216)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:207)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:146)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:139)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:380)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:422)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:413)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:53)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:198)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:169)
+	at net.metub.LandingService.initDB(LandingService.java:99)
+	at net.metub.LandingService.main(LandingService.java:51)
+[Web API Server] Start new instance at localhost:7070
+Jul 15, 2017 4:16:13 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 15, 2017 4:16:13 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Jul 15, 2017 4:16:14 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:57}] to localhost:27017
+Jul 15, 2017 4:16:14 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=769169}
+Jul 15, 2017 4:16:14 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:58}] to localhost:27017
+[Web API Server] Start new instance at localhost:7070
+Jul 15, 2017 4:25:48 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 15, 2017 4:25:49 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Jul 15, 2017 4:25:49 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:60}] to localhost:27017
+Jul 15, 2017 4:25:49 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2632844}
+Jul 15, 2017 4:25:49 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:61}] to localhost:27017
+com.mongodb.MongoCommandException: Command failed with error 48: 'a collection 'metub.counter' already exists' on server localhost:27017. The full response is { "note" : "the autoIndexId option is deprecated and will be removed in a future release", "ok" : 0.0, "errmsg" : "a collection 'metub.counter' already exists", "code" : 48, "codeName" : "NamespaceExists" }
+	at com.mongodb.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:115)
+	at com.mongodb.connection.CommandProtocol.execute(CommandProtocol.java:114)
+	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:168)
+	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:289)
+	at com.mongodb.connection.DefaultServerConnection.command(DefaultServerConnection.java:176)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:216)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:207)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:146)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:139)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:380)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:422)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:413)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:53)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:198)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:169)
+	at net.metub.LandingService.initDB(LandingService.java:99)
+	at net.metub.LandingService.main(LandingService.java:51)
+[Web API Server] Start new instance at localhost:7070
+Jul 15, 2017 5:14:33 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 15, 2017 5:14:34 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Jul 15, 2017 5:14:34 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:63}] to localhost:27017
+Jul 15, 2017 5:14:34 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2732830}
+Jul 15, 2017 5:14:34 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:64}] to localhost:27017
+com.mongodb.MongoCommandException: Command failed with error 48: 'a collection 'metub.counter' already exists' on server localhost:27017. The full response is { "note" : "the autoIndexId option is deprecated and will be removed in a future release", "ok" : 0.0, "errmsg" : "a collection 'metub.counter' already exists", "code" : 48, "codeName" : "NamespaceExists" }
+	at com.mongodb.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:115)
+	at com.mongodb.connection.CommandProtocol.execute(CommandProtocol.java:114)
+	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:168)
+	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:289)
+	at com.mongodb.connection.DefaultServerConnection.command(DefaultServerConnection.java:176)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:216)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:207)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:146)
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:139)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:380)
+	at com.mongodb.operation.CreateCollectionOperation$1.call(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:422)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:413)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:376)
+	at com.mongodb.operation.CreateCollectionOperation.execute(CreateCollectionOperation.java:53)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:198)
+	at com.mongodb.MongoDatabaseImpl.createCollection(MongoDatabaseImpl.java:169)
+	at net.metub.LandingService.initDB(LandingService.java:99)
+	at net.metub.LandingService.main(LandingService.java:51)
+[Web API Server] Start new instance at localhost:7070
